@@ -48,17 +48,13 @@ V: Measured voltage magnitude.
 ### 4. OpenDSS Scenario Configuration Files
 To evaluate the network hosting capacity under varying boundary conditions, three distinct scenario configurations are required. These parameters dictate the asset states during the OpenDSS power flow execution.
 
-Create three separate CSV files (scenario_1_baseline.csv, scenario_2_high_ev.csv, scenario_3_high_pv.csv) utilizing the uniform structure defined below.
+Create three separate CSV files (scenario_1.csv, scenario_2.csv, scenario_3.csv) utilizing the uniform structure defined below.
 
 Scenario CSV Format:
 
 Customer: The target consumer node (e.g., H1).
 
-Asset_Type: The specific technology targeted for the scenario (EV, PV, HP, ESS).
-
-Status: Binary operational state (1 for active participation, 0 for inactive).
-
-Multiplier: Scaling factor applied to the nominal active and reactive power capacities of the specified asset.
+.......
 
 ### 5. OpenDSS 
 Install program https://www.epri.com/pages/sa/opendss 
