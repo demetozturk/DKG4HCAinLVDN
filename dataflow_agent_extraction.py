@@ -3,7 +3,7 @@ import google.generativeai as genai
 from rdflib import Graph, Namespace
 
 # Configuration and Namespace Definition
-GRID = Namespace("http://mygrid.com/")
+GRID = Namespace("http://UKLVgrid.com/")
 GRAPH_FILE = "dynamic_grid.ttl"
 
 def update_topology_from_text(api_key, text_file_path):
@@ -55,7 +55,8 @@ def update_topology_from_text(api_key, text_file_path):
     print(f"Topological extraction complete. Static graph saved to {GRAPH_FILE}.")
 
 if __name__ == "__main__":
-    api_key = "YOUR_GEMINI_API_KEY"
+    api_key = "GEMINI_API_KEY"
     topology_file = "topology_input.txt"
 
     update_topology_from_text(api_key, topology_file)
+
