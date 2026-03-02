@@ -5,7 +5,7 @@ from rdflib import Graph, Namespace, Literal
 # Semantic Namespace Definition
 GRID = Namespace("http://UKLVgrid.com/")
 GRAPH_FILE = "dynamic_grid.ttl"
-OPENDSS_RESULT_FILE = "opendss_dummy_results.csv"
+OPENDSS_RESULT_FILE = "opendss_example_results.csv"
 
 # Operational Thresholds
 V_MIN = 216.2
@@ -76,3 +76,4 @@ def update_graph_with_simulation_results(target_time):
     dkg.serialize(destination=GRAPH_FILE, format="turtle")
 
     print(f"Knowledge Graph updated. Obsolete states deleted and new OpenDSS outcomes applied for {target_time}.")
+
