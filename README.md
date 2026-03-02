@@ -24,7 +24,7 @@ The topology extraction agent necessitates authorized access to the Google Gemin
 
 Generation Instructions:
 
-Navigate to Google AI Studio (aistudio.google.com).
+Navigate to Google AI Studio (aistudio.google.com ).
 
 Authenticate utilizing a registered Google account.
 
