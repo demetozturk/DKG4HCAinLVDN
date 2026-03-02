@@ -2,10 +2,10 @@ import os
 from rdflib import Graph, Namespace
 
 # Semantic Namespace Definition
-GRID = Namespace("http://mygrid.com/")
+GRID = Namespace("http://UKLVgrid.com/")
 GRAPH_FILE = "dynamic_grid.ttl"
 
-# Operational Thresholds
+# Operational Thresholds for UK # please check your country!!
 V_MIN = 216.2
 V_MAX = 253.0
 
@@ -21,7 +21,7 @@ def evaluate_baseline_voltages(target_time):
 
     # Formulate SPARQL query to extract consumer voltages
     query = f"""
-        PREFIX grid: <http://mygrid.com/>
+        PREFIX grid: <http://UKLVgrid.com/>
         SELECT ?consumer ?v
         WHERE {{
             ?meas grid:hasTime "{target_time}" .
@@ -42,4 +42,5 @@ def evaluate_baseline_voltages(target_time):
         elif voltage_magnitude > V_MAX:
             print(f"Alert: Consumer {consumer_id} exhibits overvoltage ({voltage_magnitude}V).")
         else:
+
             print(f"Status Normal: Consumer {consumer_id} operates within limits ({voltage_magnitude}V).")
