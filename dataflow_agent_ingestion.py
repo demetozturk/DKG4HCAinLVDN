@@ -13,7 +13,7 @@ def prune_outdated_measurements(dkg, current_sim_time):
     
     # Query the graph to identify all measurement timestamps
     query = """
-        PREFIX grid: <http://mygrid.com/>
+        PREFIX grid: <http://UKLVgrid.com/>
         SELECT ?meas ?time
         WHERE {
             ?meas grid:hasTime ?time .
@@ -113,3 +113,4 @@ if __name__ == "__main__":
     for hour in simulated_trigger_hours:
 
         process_incremental_readings(readings_file, simulated_date, hour)
+
