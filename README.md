@@ -24,7 +24,7 @@ The topology extraction agent necessitates authorized access to the Google Gemin
 
 Generation Instructions:
 
-Navigate to Google AI Studio (aistudio.google.com ).
+Navigate to Google AI Studio (https://aistudio.google.com/ ) .
 
 Authenticate utilizing a registered Google account.
 
@@ -60,5 +60,5 @@ Status: Binary operational state (1 for active participation, 0 for inactive).
 
 Multiplier: Scaling factor applied to the nominal active and reactive power capacities of the specified asset.
 
-### 4. OpenDSS 
+### 5. OpenDSS 
 Install program https://www.epri.com/pages/sa/opendss 
