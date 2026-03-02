@@ -54,6 +54,7 @@ Scenario CSV Format:
 
 Customer: The target consumer node (e.g., H1).
 
+#### Note: run openDSS can be implemented according to https://opendss.epri.com/PythontoOpenDSSInterface.html
 .......
 
 ### 5. OpenDSS 
