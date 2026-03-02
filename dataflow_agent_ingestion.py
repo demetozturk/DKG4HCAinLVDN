@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from rdflib import Graph, Namespace, Literal
 
 # Configuration and Namespace Definition
-GRID = Namespace("http://mygrid.com/")
+GRID = Namespace("http://UKLVgrid.com/")
 GRAPH_FILE = "dynamic_grid.ttl"
 
 def prune_outdated_measurements(dkg, current_sim_time):
@@ -111,4 +111,5 @@ if __name__ == "__main__":
     simulated_trigger_hours = [10, 11, 12, 13, 14, 16, 17, 18, 19, 20]
     
     for hour in simulated_trigger_hours:
+
         process_incremental_readings(readings_file, simulated_date, hour)
