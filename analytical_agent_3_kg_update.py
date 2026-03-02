@@ -3,7 +3,7 @@ import pandas as pd
 from rdflib import Graph, Namespace, Literal
 
 # Semantic Namespace Definition
-GRID = Namespace("http://mygrid.com/")
+GRID = Namespace("http://UKLVgrid.com/")
 GRAPH_FILE = "dynamic_grid.ttl"
 OPENDSS_RESULT_FILE = "opendss_dummy_results.csv"
 
@@ -35,7 +35,7 @@ def update_graph_with_simulation_results(target_time):
         
         # Step 1: Identify and purge preceding analysis nodes for this specific consumer
         query_obsolete = f"""
-            PREFIX grid: <http://mygrid.com/>
+            PREFIX grid: <http://UKLVgrid.com/>
             SELECT ?analysis
             WHERE {{
                 ?analysis grid:analyzes grid:{consumer} .
@@ -74,4 +74,5 @@ def update_graph_with_simulation_results(target_time):
 
     # Persist the structural updates to the foundational database
     dkg.serialize(destination=GRAPH_FILE, format="turtle")
+
     print(f"Knowledge Graph updated. Obsolete states deleted and new OpenDSS outcomes applied for {target_time}.")
