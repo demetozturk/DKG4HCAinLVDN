@@ -12,7 +12,7 @@ def update_topology_from_text(api_key, text_file_path):
     
     # Initialize the LLM
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-XXXX') #update based on your selected model
     
     # Read the textual topology description
     with open(text_file_path, 'r') as file:
@@ -57,4 +57,5 @@ def update_topology_from_text(api_key, text_file_path):
 if __name__ == "__main__":
     api_key = "YOUR_GEMINI_API_KEY"
     topology_file = "topology_input.txt"
+
     update_topology_from_text(api_key, topology_file)
