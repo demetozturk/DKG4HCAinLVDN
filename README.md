@@ -5,6 +5,8 @@ This repository contains the codebase and foundational data structures for the m
 
 The framework employs a multi-agent system to dynamically construct a Resource Description Framework (RDF) Knowledge Graph from unstructured topological descriptions and empirical smart meter data. This semantic structure subsequently drives OpenDSS simulations to assess hosting capacity and identify grid violations associated with the integration of low-carbon technologies by the consumer.
 
+#### Scripts provide a general framework implementation, which should be updated based on your specific network configuration, power system features, and PFA output.
+
 ## Prerequisites and Initial Setup
 Prior to executing the analytical scripts, the following foundational files and credentials must be established within the primary repository directory.
 
@@ -45,14 +47,10 @@ Q: Reactive power value.
 
 V: Measured voltage magnitude.
 
-### 4. OpenDSS Scenario Configuration Files
-To evaluate the network hosting capacity under varying boundary conditions, three distinct scenario configurations are required. These parameters dictate the asset states during the OpenDSS power flow execution.
+### 4. OpenDSS Scenario Output Files
+To evaluate the network hosting capacity under varying boundary conditions, distinct scenario configurations are required. These parameters dictate the asset states during the OpenDSS power flow execution.
 
-Create three separate CSV files (scenario_1.csv, scenario_2.csv, scenario_3.csv) utilizing the uniform structure defined below.
-
-Scenario CSV Format:
-
-Customer: The target consumer node (e.g., H1).
+You should preprocess the output file of the OpenDSS according to the structure required by the analytical agent.
 
 #### Note: run openDSS for analytical_agent_2 can be implemented according to https://opendss.epri.com/PythontoOpenDSSInterface.html 
 ####       expectedresults are given in the example csv file to run analytical_agent_3
